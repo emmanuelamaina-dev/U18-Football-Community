@@ -1,0 +1,1354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: "Open Sans", sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #061c17 0%,
+            #0b3027 45%,
+            #102a43 100%
+        );
+
+    color: #102a43;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.background {
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    opacity: 0.23;
+
+    animation:
+        floatingCircle
+        10s
+        ease-in-out
+        infinite alternate;
+}
+
+
+.circle-one {
+    width: 420px;
+    height: 420px;
+
+    background: #2e8b57;
+
+    top: -170px;
+    left: -130px;
+}
+
+
+.circle-two {
+    width: 320px;
+    height: 320px;
+
+    background: #f4b942;
+
+    right: -120px;
+    bottom: -100px;
+
+    animation-delay: 2s;
+}
+
+
+.circle-three {
+    width: 190px;
+    height: 190px;
+
+    background: #00a6a6;
+
+    right: 25%;
+    top: 10%;
+
+    animation-delay: 4s;
+}
+
+
+@keyframes floatingCircle {
+
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(30px, 40px) scale(1.08);
+    }
+}
+
+
+/* =====================================================
+   FOOTBALL ANIMATION
+===================================================== */
+
+.floating-ball {
+    position: absolute;
+
+    font-size: 40px;
+
+    opacity: 0.12;
+
+    animation:
+        floatingBall
+        8s
+        ease-in-out
+        infinite;
+}
+
+
+.ball-one {
+    left: 8%;
+    top: 15%;
+}
+
+
+.ball-two {
+    right: 10%;
+    top: 70%;
+
+    animation-delay: 2s;
+}
+
+
+.ball-three {
+    right: 35%;
+    top: 35%;
+
+    animation-delay: 4s;
+}
+
+
+@keyframes floatingBall {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(180deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.signup-wrapper {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1150px, 92%);
+
+    margin: 35px auto;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    background: rgba(255,255,255,0.97);
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.35);
+
+    animation:
+        pageEntrance
+        0.8s
+        ease-out;
+}
+
+
+@keyframes pageEntrance {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   LEFT SIDE
+===================================================== */
+
+.signup-introduction {
+
+    padding: 60px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            145deg,
+            #102a43,
+            #0b3d2e
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.signup-introduction::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    border: 2px solid rgba(255,255,255,0.08);
+
+    border-radius: 50%;
+
+    right: -130px;
+    bottom: -120px;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo,
+.mobile-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.logo-mark {
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #f4b942;
+
+    color: #102a43;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 24px;
+
+    border-radius: 10px;
+
+    transform: rotate(-4deg);
+}
+
+
+.logo-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 0.95;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 21px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   INTRO CONTENT
+===================================================== */
+
+.intro-content {
+
+    margin-top: 90px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.small-heading {
+
+    color: #f4b942;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+
+.intro-content h1 {
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(50px, 5vw, 75px);
+
+    line-height: 0.9;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+
+.intro-content h1 span {
+
+    display: block;
+
+    color: #f4b942;
+}
+
+
+.intro-content > p {
+
+    max-width: 420px;
+
+    color: rgba(255,255,255,0.8);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.community-features {
+
+    margin-top: 40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+.feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.feature-icon {
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255,255,255,0.1);
+
+    border-radius: 10px;
+
+    color: #f4b942;
+
+    font-size: 20px;
+}
+
+
+.feature strong {
+
+    display: block;
+
+    font-size: 14px;
+
+    margin-bottom: 2px;
+}
+
+
+.feature small {
+
+    color: rgba(255,255,255,0.6);
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   FORM SIDE
+===================================================== */
+
+.signup-card {
+
+    padding: 45px 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.mobile-logo {
+    display: none;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.form-tag {
+
+    display: inline-block;
+
+    color: #2e8b57;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 7px;
+}
+
+
+.form-header h2 {
+
+    font-family: "Bebas Neue", sans-serif;
+
+    color: #102a43;
+
+    font-size: 46px;
+
+    letter-spacing: 1px;
+}
+
+
+.form-header p {
+
+    color: #6b7c8f;
+
+    font-size: 13px;
+
+    margin-top: 4px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   TWO COLUMNS
+===================================================== */
+
+.two-column {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* =====================================================
+   INPUT GROUP
+===================================================== */
+
+.input-group {
+
+    margin-bottom: 12px;
+}
+
+
+.input-group label {
+
+    display: block;
+
+    color: #102a43;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 6px;
+}
+
+
+.input-wrapper {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.input-icon {
+
+    position: absolute;
+
+    left: 13px;
+
+    font-size: 13px;
+
+    opacity: 0.6;
+
+    z-index: 2;
+}
+
+
+.input-wrapper input,
+.input-wrapper select {
+
+    width: 100%;
+
+    height: 45px;
+
+    border: 1.5px solid #dce4ea;
+
+    border-radius: 9px;
+
+    background: #f8fafb;
+
+    color: #102a43;
+
+    padding:
+        0
+        38px
+        0
+        38px;
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 12px;
+
+    outline: none;
+
+    transition:
+        border 0.25s,
+        box-shadow 0.25s,
+        background 0.25s;
+}
+
+
+.input-wrapper input:focus,
+.input-wrapper select:focus {
+
+    background: white;
+
+    border-color: #2e8b57;
+
+    box-shadow:
+        0 0 0 4px rgba(46,139,87,0.1);
+}
+
+
+.input-wrapper input::placeholder {
+
+    color: #9aa8b4;
+}
+
+
+/* =====================================================
+   SELECT
+===================================================== */
+
+.select-wrapper::after {
+
+    content: "▼";
+
+    position: absolute;
+
+    right: 14px;
+
+    font-size: 8px;
+
+    color: #6b7c8f;
+
+    pointer-events: none;
+}
+
+
+.select-wrapper select {
+
+    appearance: none;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   PASSWORD TOGGLE
+===================================================== */
+
+.password-toggle {
+
+    position: absolute;
+
+    right: 10px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    opacity: 0.55;
+
+    transition: 0.2s;
+}
+
+
+.password-toggle:hover {
+
+    opacity: 1;
+
+    transform: scale(1.1);
+}
+
+
+/* =====================================================
+   HINTS
+===================================================== */
+
+.input-hint {
+
+    display: block;
+
+    color: #9aa8b4;
+
+    font-size: 9px;
+
+    margin-top: 3px;
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.error-message {
+
+    display: block;
+
+    min-height: 13px;
+
+    color: #d64545;
+
+    font-size: 10px;
+
+    margin-top: 3px;
+}
+
+
+.input-error {
+
+    border-color: #d64545 !important;
+
+    box-shadow:
+        0 0 0 4px rgba(214,69,69,0.08) !important;
+}
+
+
+/* =====================================================
+   PASSWORD STRENGTH
+===================================================== */
+
+.password-strength {
+
+    margin-top: -3px;
+
+    margin-bottom: 12px;
+}
+
+
+.strength-bar {
+
+    width: 100%;
+
+    height: 4px;
+
+    background: #e7edf0;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+.strength-bar span {
+
+    display: block;
+
+    width: 0;
+
+    height: 100%;
+
+    border-radius: 10px;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.password-strength p {
+
+    font-size: 9px;
+
+    color: #9aa8b4;
+
+    margin-top: 4px;
+}
+
+
+/* =====================================================
+   TERMS
+===================================================== */
+
+.terms {
+
+    margin-top: 4px;
+
+    margin-bottom: 2px;
+}
+
+
+.terms label {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+
+.terms input {
+
+    display: none;
+}
+
+
+.custom-checkbox {
+
+    flex-shrink: 0;
+
+    width: 16px;
+    height: 16px;
+
+    border: 1.5px solid #c8d3dc;
+
+    border-radius: 4px;
+
+    position: relative;
+
+    transition: 0.2s;
+}
+
+
+.terms input:checked + .custom-checkbox {
+
+    background: #2e8b57;
+
+    border-color: #2e8b57;
+}
+
+
+.terms input:checked + .custom-checkbox::after {
+
+    content: "✓";
+
+    position: absolute;
+
+    color: white;
+
+    font-size: 10px;
+
+    left: 3px;
+
+    top: -1px;
+}
+
+
+.terms-text {
+
+    color: #7a8996;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+.terms-text a {
+
+    color: #2e8b57;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.terms-text a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status-message {
+
+    display: none;
+
+    padding: 9px 12px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    margin-top: 10px;
+}
+
+
+.status-message.show {
+
+    display: block;
+
+    animation:
+        statusAppear
+        0.3s
+        ease;
+}
+
+
+.status-message.error {
+
+    background: #fff1f1;
+
+    color: #b73535;
+}
+
+
+.status-message.success {
+
+    background: #edf9f2;
+
+    color: #207341;
+}
+
+
+@keyframes statusAppear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.signup-button {
+
+    width: 100%;
+
+    height: 48px;
+
+    margin-top: 12px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2e8b57,
+            #207248
+        );
+
+    color: white;
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+
+.signup-button::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -100%;
+
+    width: 100%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.2),
+            transparent
+        );
+
+    transition: 0.5s;
+}
+
+
+.signup-button:hover::before {
+
+    left: 100%;
+}
+
+
+.signup-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(46,139,87,0.25);
+}
+
+
+.button-arrow {
+
+    font-size: 17px;
+
+    transition: 0.2s;
+}
+
+
+.signup-button:hover .button-arrow {
+
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   LOADER
+===================================================== */
+
+.button-loader {
+
+    display: none;
+
+    width: 17px;
+    height: 17px;
+
+    border: 2px solid rgba(255,255,255,0.4);
+
+    border-top-color: white;
+
+    border-radius: 50%;
+
+    animation:
+        spin
+        0.7s
+        linear
+        infinite;
+}
+
+
+.signup-button.loading .button-text,
+.signup-button.loading .button-arrow {
+
+    display: none;
+}
+
+
+.signup-button.loading .button-loader {
+
+    display: block;
+}
+
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   LOGIN LINK
+===================================================== */
+
+.login-link {
+
+    text-align: center;
+
+    margin-top: 16px;
+
+    font-size: 11px;
+
+    color: #7a8996;
+}
+
+
+.login-link a {
+
+    color: #2e8b57;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    margin-left: 4px;
+}
+
+
+.login-link a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   SECURITY
+===================================================== */
+
+.security-note {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 18px;
+
+    padding-top: 13px;
+
+    border-top: 1px solid #edf0f2;
+
+    color: #9aa8b4;
+}
+
+
+.security-note span {
+
+    font-size: 12px;
+}
+
+
+.security-note p {
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1150px, 92%);
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: rgba(255,255,255,0.7);
+
+    font-size: 10px;
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    gap: 20px;
+}
+
+
+.footer-links a {
+
+    color: rgba(255,255,255,0.7);
+
+    text-decoration: none;
+}
+
+
+.footer-links a:hover {
+
+    color: white;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .signup-wrapper {
+
+        grid-template-columns: 1fr;
+
+        width: min(650px, 92%);
+    }
+
+
+    .signup-introduction {
+
+        display: none;
+    }
+
+
+    .signup-card {
+
+        padding: 50px;
+    }
+
+
+    .mobile-logo {
+
+        display: flex;
+
+        margin-bottom: 35px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding-top: 10px;
+    }
+
+
+    .signup-wrapper {
+
+        width: calc(100% - 20px);
+
+        margin: 10px auto;
+
+        border-radius: 20px;
+    }
+
+
+    .signup-card {
+
+        padding: 30px 22px;
+    }
+
+
+    .mobile-logo {
+
+        margin-bottom: 25px;
+    }
+
+
+    .mobile-logo .logo-mark {
+
+        width: 45px;
+        height: 45px;
+
+        font-size: 21px;
+    }
+
+
+    .mobile-logo .logo-text {
+
+        font-size: 18px;
+    }
+
+
+    .form-header h2 {
+
+        font-size: 40px;
+    }
+
+
+    .form-header p {
+
+        margin-bottom: 20px;
+    }
+
+
+    .two-column {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    .input-wrapper input,
+    .input-wrapper select {
+
+        height: 48px;
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+
+        text-align: center;
+    }
+
+
+    .footer-links {
+
+        gap: 15px;
+    }
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 375px) {
+
+    .signup-card {
+
+        padding: 25px 18px;
+    }
+
+
+    .form-header h2 {
+
+        font-size: 36px;
+    }
+
+
+    .terms-text {
+
+        font-size: 9px;
+    }
+}

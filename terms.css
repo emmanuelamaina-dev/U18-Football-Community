@@ -1,0 +1,1437 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: "Open Sans", sans-serif;
+
+    color: #102a43;
+
+    background:
+        linear-gradient(
+            135deg,
+            #061c17,
+            #0b3027 45%,
+            #102a43
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.background {
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.background-circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    opacity: 0.18;
+
+    animation:
+        floatCircle
+        12s
+        ease-in-out
+        infinite alternate;
+}
+
+
+.circle-one {
+    width: 450px;
+    height: 450px;
+
+    background: #2e8b57;
+
+    top: -200px;
+    left: -150px;
+}
+
+
+.circle-two {
+    width: 350px;
+    height: 350px;
+
+    background: #f4b942;
+
+    right: -150px;
+    bottom: -150px;
+
+    animation-delay: 2s;
+}
+
+
+.circle-three {
+    width: 200px;
+    height: 200px;
+
+    background: #00a6a6;
+
+    right: 25%;
+    top: 20%;
+
+    animation-delay: 4s;
+}
+
+
+@keyframes floatCircle {
+
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(30px, 40px);
+    }
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(1200px, 92%);
+
+    margin: auto;
+
+    padding: 25px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: white;
+
+    text-decoration: none;
+}
+
+
+.brand-logo {
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #f4b942;
+
+    color: #102a43;
+
+    border-radius: 9px;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 23px;
+
+    transform: rotate(-4deg);
+}
+
+
+.brand-name {
+
+    display: flex;
+
+    flex-direction: column;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 19px;
+
+    line-height: 0.9;
+
+    letter-spacing: 1px;
+}
+
+
+.back-button {
+
+    padding: 10px 17px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 8px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    transition: 0.25s;
+}
+
+
+.back-button:hover {
+
+    background: rgba(255,255,255,0.1);
+
+    transform: translateX(-3px);
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.page-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1050px, 92%);
+
+    margin: 25px auto 60px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.page-header {
+
+    color: white;
+
+    text-align: center;
+
+    padding: 60px 20px 45px;
+}
+
+
+.section-label {
+
+    display: inline-block;
+
+    color: #2e8b57;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+
+.page-header .section-label {
+
+    color: #f4b942;
+}
+
+
+.page-header h1 {
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(55px, 8vw, 90px);
+
+    line-height: 0.85;
+
+    letter-spacing: 2px;
+}
+
+
+.page-header h1 span {
+
+    color: #f4b942;
+
+    display: block;
+}
+
+
+.page-header > p {
+
+    max-width: 600px;
+
+    margin: 25px auto 15px;
+
+    color: rgba(255,255,255,0.72);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+.document-info {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    color: rgba(255,255,255,0.5);
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   QUICK NAVIGATION
+===================================================== */
+
+.document-navigation {
+
+    position: sticky;
+
+    top: 10px;
+
+    z-index: 10;
+
+    margin-bottom: 25px;
+
+    padding: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    background: rgba(16,42,67,0.92);
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 12px;
+}
+
+
+.document-navigation p {
+
+    color: #f4b942;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-right: 8px;
+}
+
+
+.document-navigation a {
+
+    padding: 7px 11px;
+
+    color: rgba(255,255,255,0.75);
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    transition: 0.2s;
+}
+
+
+.document-navigation a:hover {
+
+    color: white;
+
+    background: rgba(255,255,255,0.1);
+}
+
+
+/* =====================================================
+   DOCUMENT
+===================================================== */
+
+.document {
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,0.25);
+}
+
+
+/* =====================================================
+   DOCUMENT SECTION
+===================================================== */
+
+.document-section {
+
+    display: grid;
+
+    grid-template-columns: 90px 1fr;
+
+    gap: 25px;
+
+    padding: 60px;
+
+    border-bottom: 1px solid #edf0f2;
+}
+
+
+.section-number {
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 42px;
+
+    color: #dfe8e3;
+
+    line-height: 1;
+}
+
+
+.section-content {
+
+    max-width: 780px;
+}
+
+
+.section-content h2 {
+
+    font-family: "Bebas Neue", sans-serif;
+
+    color: #102a43;
+
+    font-size: 38px;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 15px;
+}
+
+
+.section-content p {
+
+    color: #647585;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   PRINCIPLES
+===================================================== */
+
+.principle-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+
+.principle-card {
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background: #f7faf8;
+
+    border: 1px solid #e8efeb;
+}
+
+
+.principle-icon {
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #102a43;
+
+    color: #f4b942;
+
+    border-radius: 8px;
+
+    margin-bottom: 15px;
+
+    font-weight: 700;
+}
+
+
+.principle-card h3 {
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 20px;
+
+    color: #102a43;
+}
+
+
+.principle-card p {
+
+    font-size: 11px;
+
+    margin-top: 5px;
+
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   PLEDGE
+===================================================== */
+
+.pledge-section {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7faf8,
+            #ffffff
+        );
+}
+
+
+.pledge-box {
+
+    margin-top: 25px;
+
+    padding: 35px;
+
+    position: relative;
+
+    background: #102a43;
+
+    color: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+}
+
+
+.quote-mark {
+
+    position: absolute;
+
+    top: -15px;
+    right: 25px;
+
+    font-family: Georgia, serif;
+
+    font-size: 100px;
+
+    color: rgba(244,185,66,0.15);
+}
+
+
+.pledge-box p {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: rgba(255,255,255,0.82);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   RULES
+===================================================== */
+
+.rules-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+.rule-box {
+
+    padding: 25px;
+
+    border-radius: 12px;
+}
+
+
+.rule-box h3 {
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+
+.rule-box ul {
+
+    list-style: none;
+}
+
+
+.rule-box li {
+
+    padding: 7px 0;
+
+    font-size: 11px;
+
+    color: #637484;
+}
+
+
+.rule-box li::before {
+
+    content: "•";
+
+    margin-right: 8px;
+}
+
+
+.allowed {
+
+    background: #eff9f3;
+}
+
+
+.allowed h3 {
+
+    color: #247346;
+}
+
+
+.prohibited {
+
+    background: #fff5f5;
+}
+
+
+.prohibited h3 {
+
+    color: #bb4141;
+}
+
+
+/* =====================================================
+   NOTICE
+===================================================== */
+
+.notice-box {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin: 25px 0;
+
+    padding: 20px;
+
+    background: #f5f8fa;
+
+    border-left: 4px solid #2e8b57;
+
+    border-radius: 8px;
+}
+
+
+.notice-icon {
+
+    flex-shrink: 0;
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #2e8b57;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-weight: 700;
+}
+
+
+.notice-box h3 {
+
+    font-size: 13px;
+
+    color: #102a43;
+
+    margin-bottom: 5px;
+}
+
+
+.notice-box p {
+
+    margin: 0;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   SUBHEADING
+===================================================== */
+
+.subheading {
+
+    font-size: 14px;
+
+    color: #102a43;
+
+    margin: 25px 0 10px;
+}
+
+
+/* =====================================================
+   INFORMATION
+===================================================== */
+
+.information-list {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+
+.information-list div {
+
+    padding: 12px;
+
+    background: #f7faf8;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    color: #536575;
+}
+
+
+.information-list span {
+
+    display: inline-flex;
+
+    width: 22px;
+    height: 22px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 7px;
+
+    background: #102a43;
+
+    color: #f4b942;
+
+    border-radius: 5px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   SECURITY
+===================================================== */
+
+.security-list {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin: 25px 0;
+}
+
+
+.security-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px;
+
+    background: #f7faf8;
+
+    border-radius: 8px;
+}
+
+
+.security-item span {
+
+    color: #2e8b57;
+
+    font-weight: 700;
+}
+
+
+.security-item p {
+
+    margin: 0;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   RECOGNITION
+===================================================== */
+
+.recognition-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+
+    margin: 25px 0;
+}
+
+
+.recognition-grid div {
+
+    padding: 20px 12px;
+
+    background: #102a43;
+
+    border-radius: 10px;
+
+    color: white;
+}
+
+
+.recognition-grid strong {
+
+    display: block;
+
+    color: #f4b942;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 17px;
+}
+
+
+.recognition-grid span {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   REPORTING
+===================================================== */
+
+.report-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin: 25px 0;
+}
+
+
+.report-grid div {
+
+    padding: 15px;
+
+    background: #f7faf8;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+}
+
+
+.report-grid span {
+
+    color: #2e8b57;
+
+    font-weight: 700;
+
+    margin-right: 5px;
+}
+
+
+/* =====================================================
+   CONTENT RULES
+===================================================== */
+
+.content-rules {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+
+.content-rules div {
+
+    padding: 13px;
+
+    background: #f7faf8;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    color: #5c6e7d;
+}
+
+
+.good {
+
+    color: #2e8b57;
+
+    font-weight: 700;
+
+    margin-right: 8px;
+}
+
+
+.bad {
+
+    color: #c74444;
+
+    font-weight: 700;
+
+    margin-right: 8px;
+}
+
+
+/* =====================================================
+   STANDARD LIST
+===================================================== */
+
+.standard-list {
+
+    padding-left: 20px;
+
+    color: #647585;
+
+    font-size: 12px;
+
+    line-height: 2;
+}
+
+
+/* =====================================================
+   ACCEPTANCE
+===================================================== */
+
+.acceptance-section {
+
+    padding: 70px 50px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #102a43,
+            #0b3d2e
+        );
+
+    color: white;
+}
+
+
+.acceptance-icon {
+
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f4b942;
+
+    color: #102a43;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+
+.acceptance-section .section-tag {
+
+    color: #f4b942;
+}
+
+
+.acceptance-section h2 {
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+
+.acceptance-section > p {
+
+    max-width: 550px;
+
+    margin: auto;
+
+    color: rgba(255,255,255,0.7);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+.pledge-summary {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 30px 0;
+}
+
+
+.pledge-summary span {
+
+    padding: 9px 15px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    border-radius: 6px;
+
+    color: #f4b942;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    letter-spacing: 1px;
+
+    font-size: 13px;
+}
+
+
+.accept-button {
+
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: #f4b942;
+
+    color: #102a43;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+
+.accept-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1050px, 92%);
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: rgba(255,255,255,0.6);
+
+    font-size: 10px;
+}
+
+
+footer div {
+
+    display: flex;
+
+    gap: 20px;
+}
+
+
+footer a {
+
+    color: rgba(255,255,255,0.6);
+
+    text-decoration: none;
+}
+
+
+footer a:hover {
+
+    color: white;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .document-section {
+
+        grid-template-columns: 1fr;
+
+        padding: 45px 35px;
+
+        gap: 5px;
+    }
+
+
+    .section-number {
+
+        font-size: 30px;
+    }
+
+
+    .principle-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .recognition-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .document-navigation {
+
+        justify-content: flex-start;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        padding: 18px 0;
+    }
+
+
+    .brand-logo {
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 20px;
+    }
+
+
+    .brand-name {
+
+        font-size: 16px;
+    }
+
+
+    .back-button {
+
+        padding: 8px 10px;
+
+        font-size: 9px;
+    }
+
+
+    .page-container {
+
+        width: calc(100% - 20px);
+
+        margin-top: 10px;
+    }
+
+
+    .page-header {
+
+        padding: 40px 10px 30px;
+    }
+
+
+    .page-header h1 {
+
+        font-size: 55px;
+    }
+
+
+    .document-navigation {
+
+        top: 5px;
+
+        padding: 10px;
+
+        gap: 4px;
+    }
+
+
+    .document-navigation p {
+
+        width: 100%;
+
+        margin-bottom: 3px;
+    }
+
+
+    .document-navigation a {
+
+        font-size: 9px;
+
+        padding: 6px 8px;
+    }
+
+
+    .document {
+
+        border-radius: 15px;
+    }
+
+
+    .document-section {
+
+        padding: 35px 22px;
+    }
+
+
+    .section-content h2 {
+
+        font-size: 32px;
+    }
+
+
+    .rules-grid,
+    .security-list,
+    .content-rules {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .information-list {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .recognition-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .report-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .pledge-box {
+
+        padding: 25px 20px;
+    }
+
+
+    .acceptance-section {
+
+        padding: 50px 25px;
+    }
+
+
+    .acceptance-section h2 {
+
+        font-size: 34px;
+    }
+
+
+    .pledge-summary {
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        align-items: center;
+    }
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 375px) {
+
+    .page-header h1 {
+
+        font-size: 48px;
+    }
+
+
+    .document-section {
+
+        padding: 30px 18px;
+    }
+
+
+    .recognition-grid,
+    .report-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .section-content h2 {
+
+        font-size: 29px;
+    }
+}

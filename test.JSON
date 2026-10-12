@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "overallProgress": 50,
+  "totalGoals": 2,
+  "completedGoals": 1,
+  "progress": [
+    {
+      "Goal": "Improve passing",
+      "Development_Area": "Technical Skills",
+      "Progress_Status": "In Progress",
+      "Progress_Percentage": 50
+    }
+  ]
+}

@@ -1,0 +1,398 @@
+:root {
+  --green: #07513f;
+  --deep-green: #063b32;
+  --gold: #e6ad2b;
+  --ink: #173d36;
+  --muted: #60746f;
+  --paper: #f4f8f5;
+  --line: #dce7e1;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 10;
+  top: -50px;
+  left: 15px;
+  padding: 10px 14px;
+  color: var(--green);
+  background: var(--white);
+  border-radius: 6px;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+.site-header {
+  min-height: 82px;
+  padding: 12px 5.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  color: var(--white);
+  background: var(--green);
+  border-bottom: 2px solid var(--gold);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+}
+
+.brand-mark {
+  color: var(--gold);
+  font-size: 43px;
+  font-weight: 900;
+  letter-spacing: -7px;
+  line-height: 1;
+}
+
+.brand-mark span {
+  color: var(--white);
+}
+
+.brand-words {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-words strong {
+  font-size: 18px;
+  letter-spacing: .5px;
+}
+
+.brand-words small {
+  margin-top: 4px;
+  color: #f3c955;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 2vw, 28px);
+}
+
+.main-nav a,
+.site-footer nav a {
+  color: #edf5f1;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible,
+.site-footer nav a:hover {
+  color: #f5ce63;
+}
+
+.header-button {
+  padding: 9px 18px;
+  color: var(--white);
+  border: 1px solid var(--gold);
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.header-button:hover,
+.header-button:focus-visible {
+  color: var(--deep-green);
+  background: var(--gold);
+}
+
+main {
+  width: min(1040px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 61px 0 68px;
+}
+
+.page-intro {
+  max-width: 700px;
+  margin: 0 auto 29px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #bd8b19;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.page-intro h1 {
+  margin: 0;
+  color: var(--deep-green);
+  font-size: clamp(40px, 6vw, 58px);
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+
+.page-intro h1 span {
+  color: #b98516;
+}
+
+.page-intro > p:last-child {
+  max-width: 620px;
+  margin: 14px auto 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.contact-card {
+  padding: 26px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(14, 60, 43, .07);
+}
+
+.form-heading {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  place-items: center;
+  color: var(--green);
+  background: #e9f3ed;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.form-heading .eyebrow {
+  margin-bottom: 3px;
+}
+
+.form-heading h2 {
+  margin: 0;
+  color: var(--deep-green);
+  font-size: 23px;
+}
+
+.form-heading p:last-child {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.form-frame {
+  min-height: 820px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e4ebe7;
+  border-radius: 9px;
+}
+
+.form-frame iframe {
+  display: block;
+  width: 100%;
+  height: 820px;
+  border: 0;
+  background: var(--white);
+}
+
+.form-fallback {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.form-fallback a {
+  color: var(--green);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.privacy-note {
+  margin: 17px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+.site-footer {
+  min-height: 100px;
+  padding: 22px max(5.5%, calc((100% - 1120px) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  color: var(--white);
+  background: var(--green);
+}
+
+.footer-brand .brand-mark {
+  font-size: 36px;
+}
+
+.footer-brand .brand-words strong {
+  font-size: 15px;
+}
+
+.footer-brand .brand-words small {
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.site-footer > p {
+  margin: 0;
+  color: #d6e5dd;
+  font-size: 12px;
+  text-align: center;
+}
+
+.site-footer nav {
+  display: flex;
+  gap: 17px;
+}
+
+.site-footer nav a {
+  font-size: 11px;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    flex-wrap: wrap;
+    gap: 13px 20px;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 5px 0 8px;
+  }
+
+  .site-footer {
+    flex-wrap: wrap;
+  }
+
+  .site-footer > p {
+    order: 3;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header {
+    padding: 12px 20px;
+  }
+
+  .brand-mark {
+    font-size: 38px;
+  }
+
+  .brand-words strong {
+    font-size: 15px;
+  }
+
+  .brand-words small {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  .header-button {
+    padding: 8px 13px;
+    font-size: 12px;
+  }
+
+  .main-nav {
+    gap: 19px;
+  }
+
+  .main-nav a {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  main {
+    width: calc(100% - 28px);
+    padding: 43px 0 48px;
+  }
+
+  .page-intro > p:last-child {
+    font-size: 14px;
+  }
+
+  .contact-card {
+    padding: 17px 12px;
+  }
+
+  .form-heading {
+    align-items: flex-start;
+    gap: 11px;
+  }
+
+  .form-heading h2 {
+    font-size: 20px;
+  }
+
+  .form-heading p:last-child {
+    font-size: 12px;
+  }
+
+  .form-frame {
+    min-height: 850px;
+  }
+
+  .form-frame iframe {
+    height: 850px;
+  }
+
+  .site-footer {
+    padding: 22px;
+    gap: 18px;
+  }
+
+  .site-footer nav {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}

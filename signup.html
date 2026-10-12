@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | U18 Football Community</title>
+
+    <link rel="stylesheet" href="signup.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================================
+         ANIMATED BACKGROUND
+    ====================================================== -->
+
+    <div class="background">
+
+        <div class="circle circle-one"></div>
+        <div class="circle circle-two"></div>
+        <div class="circle circle-three"></div>
+
+        <div class="floating-ball ball-one">⚽</div>
+        <div class="floating-ball ball-two">⚽</div>
+        <div class="floating-ball ball-three">⚽</div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN SIGN UP CONTAINER
+    ====================================================== -->
+
+    <main class="signup-wrapper">
+
+
+        <!-- =================================================
+             LEFT INFORMATION PANEL
+        ================================================== -->
+
+        <section class="signup-introduction">
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <div class="logo-mark">
+                    U18
+                </div>
+
+                <div class="logo-text">
+                    <span>FOOTBALL</span>
+                    <span>COMMUNITY</span>
+                </div>
+
+            </div>
+
+
+            <!-- INTRODUCTION -->
+
+            <div class="intro-content">
+
+                <p class="small-heading">
+                    JOIN THE COMMUNITY
+                </p>
+
+                <h1>
+                    LIFT.
+                    <span>RECOGNISE.</span>
+                    GROW.
+                </h1>
+
+                <p>
+                    Create your account and become part of a
+                    community where players support each other,
+                    celebrate progress and grow together.
+                </p>
+
+
+                <!-- FEATURES -->
+
+                <div class="community-features">
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            ↑
+                        </div>
+
+                        <div>
+                            <strong>Lift Others Up</strong>
+
+                            <small>
+                                Encourage your teammates
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            ★
+                        </div>
+
+                        <div>
+                            <strong>Recognise</strong>
+
+                            <small>
+                                Celebrate positive contributions
+                            </small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            ↗
+                        </div>
+
+                        <div>
+                            <strong>Grow Together</strong>
+
+                            <small>
+                                Track your goals and milestones
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SIGN UP FORM
+        ================================================== -->
+
+        <section class="signup-card">
+
+
+            <!-- MOBILE LOGO -->
+
+            <div class="mobile-logo">
+
+                <div class="logo-mark">
+                    U18
+                </div>
+
+                <div class="logo-text">
+                    <span>FOOTBALL</span>
+                    <span>COMMUNITY</span>
+                </div>
+
+            </div>
+
+
+
+            <!-- FORM HEADER -->
+
+            <div class="form-header">
+
+                <span class="form-tag">
+                    CREATE ACCOUNT
+                </span>
+
+                <h2>
+                    Join the team.
+                </h2>
+
+                <p>
+                    Create your account to get started.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SIGN UP FORM
+            ================================================== -->
+
+            <form id="signupForm" action="signup.php" method="POST">
+
+                <div class="input-group">
+                    <label for="full_name">Full name</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon" aria-hidden="true">👤</span>
+                        <input
+                            type="text"
+                            id="full_name"
+                            name="full_name"
+                            maxlength="100"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="signup_username">Username</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon" aria-hidden="true">@</span>
+                        <input
+                            type="text"
+                            id="signup_username"
+                            name="username"
+                            maxlength="50"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon" aria-hidden="true">✉</span>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="position">Football position</label>
+                    <div class="input-wrapper select-wrapper">
+                        <span class="input-icon" aria-hidden="true">⚽</span>
+                        <select id="position" name="position" required>
+                            <option value="Goalkeeper">Goalkeeper</option>
+                            <option value="Defender">Defender</option>
+                            <option value="Midfielder" selected>Midfielder</option>
+                            <option value="Striker">Striker</option>
+                            <option value="Winger">Winger</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="signup_password">Password</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon" aria-hidden="true">🔒</span>
+                        <input
+                            type="password"
+                            id="signup_password"
+                            name="password"
+                            minlength="8"
+                            autocomplete="new-password"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirm_password">Confirm password</label>
+                    <div class="input-wrapper">
+                        <span class="input-icon" aria-hidden="true">🔒</span>
+                        <input
+                            type="password"
+                            id="confirm_password"
+                            name="confirm_password"
+                            minlength="8"
+                            autocomplete="new-password"
+                            required
+                        >
+                    </div>
+                    <small class="error-message" id="confirmPasswordError" aria-live="polite"></small>
+                </div>
+
+                <div class="status-message" id="statusMessage" role="alert"></div>
+
+                <button type="submit" class="signup-button" id="signupButton">
+                    <span class="button-text">CREATE ACCOUNT</span>
+                    <span class="button-loader"></span>
+                    <span class="button-arrow" aria-hidden="true">→</span>
+                </button>
+
+
+
+                <!-- =================================================
+                     LOGIN LINK
+                ================================================== -->
+
+                <div class="login-link">
+
+                    <span>
+                        Already have an account?
+                    </span>
+
+                    <a href="login.html">
+                        Log in
+                    </a>
+
+                </div>
+
+            </form>
+
+
+
+            <!-- SECURITY NOTE -->
+
+            <div class="security-note">
+
+                <span>
+                    🔐
+                </span>
+
+                <p>
+                    Your account information is securely protected.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 U18 Football Community
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#">
+                Privacy
+            </a>
+
+            <a href="#">
+                Help
+            </a>
+
+            <a href="#">
+                Contact
+            </a>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="signup.js"></script>
+
+</body>
+</html>

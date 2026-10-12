@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lift Others Up | Rise Up</title>
+
+    <link rel="stylesheet" href="liftothersup.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION BAR
+    ========================== -->
+
+    <header class="navbar" id="navbar">
+
+        <div class="logo-area">
+            <a class="brand" href="#home" aria-label="UP Recognise home">
+                <span class="mark">U<span>P</span></span>
+
+                <span class="brand-words">
+                    <b>RECOGNISE</b>
+                    <small>LIFT OTHERS UP</small>
+                </span>
+            </a>
+        </div>
+
+
+        <div class="search-area">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search features..."
+                aria-label="Search this page"
+                aria-controls="searchResults"
+                aria-expanded="false"
+                autocomplete="off"
+            >
+
+            <button id="searchBtn" type="button" aria-label="Search">🔍</button>
+
+            <div
+                class="search-results"
+                id="searchResults"
+                role="region"
+                aria-label="Search results"
+                aria-live="polite"
+                hidden
+            ></div>
+
+        </div>
+
+
+        <nav class="nav-links">
+
+            <a href="practice.html">Home</a>
+
+            <a href="liftothersup.html#home" class="active">
+                Lift Others Up
+            </a>
+
+            <a href="text.html">Progress</a>
+
+            <a href="challenges.html">Challenges</a>
+
+            <a href="profile.html">Profile</a>
+
+        </nav>
+
+
+        <button class="mobile-menu" id="mobileMenu">
+            ☰
+        </button>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN PAGE
+    ========================== -->
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero-section" id="home">
+
+            <img
+                class="hero-image"
+                src="lift_others.png"
+                alt="Lifting others up"
+            >
+
+            <div class="hero-content">
+
+                <p class="small-title">
+                    RISE UP • TEAM SPIRIT
+                </p>
+
+                <h1>
+                    Lift Others Up
+                </h1>
+
+                <p>
+                    Recognise. Encourage. Build a stronger team.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             INTRODUCTION
+        ========================== -->
+
+        <section class="intro-section" id="teamwork">
+
+            <div class="intro-text">
+
+                <h2>
+                    A stronger team starts with us.
+                </h2>
+
+                <p>
+                    Football is not only about scoring goals.
+                    It is also about supporting the people around
+                    you, recognising improvement and helping
+                    your teammates stay motivated.
+                </p>
+
+            </div>
+
+
+            <div class="intro-tip">
+
+                <span></span>
+
+                <div>
+                    <strong>Small actions matter</strong>
+
+                    <p>
+                        A simple message of encouragement can
+                        make someone's training day better.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             RECOGNITION CARDS
+        ========================== -->
+
+        <section class="awards-section" id="awards">
+
+            <div class="section-title">
+
+                <p>RECOGNITION</p>
+
+                <h2>
+                    Give someone their moment
+                </h2>
+
+            </div>
+
+
+            <div class="award-grid">
+
+
+                <!-- CARD 1 -->
+
+                <article class="award-card gold-card">
+
+                    <div class="award-icon">
+                        ★
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Most Improved
+                        </h3>
+
+                        <p>
+                            Recognise someone who has shown
+                            great progress.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 2 -->
+
+                <article class="award-card green-card">
+
+                    <div class="award-icon">
+                        ↗
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Most Persistent
+                        </h3>
+
+                        <p>
+                            Celebrate someone who keeps going
+                            even when things get difficult.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 3 -->
+
+                <article class="award-card coral-card">
+
+                    <div class="award-icon">
+                        ♥
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Most Supportive
+                        </h3>
+
+                        <p>
+                            Highlight someone who encourages
+                            other players.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CARD 4 -->
+
+                <article class="award-card purple-card">
+
+                    <div class="award-icon">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Best Teammate
+                        </h3>
+
+                        <p>
+                            Recognise someone who makes the
+                            whole team stronger.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             RECOGNITION AREA
+        ========================== -->
+
+        <section class="recognition-section" id="recognition">
+
+
+            <!-- FORM -->
+
+            <div class="recognition-form card" id="recognition-form">
+
+                <div class="heading">
+
+                    <p>SHARE SOME POSITIVITY</p>
+
+                    <h2>
+                        Give a Recognition
+                    </h2>
+
+                    <span>
+                        Tell someone why they are making a
+                        difference.
+                    </span>
+
+                </div>
+
+
+                <form id="recognitionForm">
+
+
+                    <label for="player">
+                        Select a teammate
+                    </label>
+
+                    <select id="player" required>
+
+                        <option value="">
+                            Choose a player
+                        </option>
+
+                        <option value="Daniel Kimani">
+                            Daniel Kimani
+                        </option>
+
+                        <option value="Jayce Mwangi">
+                            Jayce Mwangi
+                        </option>
+
+                        <option value="Ethan Kamau">
+                            Ethan Kamau
+                        </option>
+
+                        <option value="Brian Otieno">
+                            Brian Otieno
+                        </option>
+
+                        <option value="Aisha Njeri">
+                            Aisha Njeri
+                        </option>
+
+                    </select>
+
+
+
+                    <label for="category">
+                        Category
+                    </label>
+
+                    <select id="category" required>
+
+                        <option value="">
+                            Select a category
+                        </option>
+
+                        <option value="Most Improved">
+                            Most Improved
+                        </option>
+
+                        <option value="Most Persistent">
+                            Most Persistent
+                        </option>
+
+                        <option value="Most Supportive">
+                            Most Supportive
+                        </option>
+
+                        <option value="Best Teammate">
+                            Best Teammate
+                        </option>
+
+                    </select>
+
+
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        placeholder="Write something encouraging..."
+                        maxlength="250"
+                        required
+                    ></textarea>
+
+                    <div class="counter">
+                        <span id="counter">0</span>/250
+                    </div>
+
+
+
+                    <button
+                        type="submit"
+                        class="submit-btn"
+                    >
+                        Submit Recognition
+                    </button>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- FEED -->
+
+            <div class="feed card" id="recognition-feed">
+
+                <div class="feed-heading">
+
+                    <div>
+
+                        <p>TEAM POSITIVITY</p>
+
+                        <h2>
+                            Recognition Feed
+                        </h2>
+
+                    </div>
+
+
+                    <select id="filter">
+
+                        <option value="all">
+                            All
+                        </option>
+
+                        <option value="Most Improved">
+                            Most Improved
+                        </option>
+
+                        <option value="Most Persistent">
+                            Most Persistent
+                        </option>
+
+                        <option value="Most Supportive">
+                            Most Supportive
+                        </option>
+
+                        <option value="Best Teammate">
+                            Best Teammate
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div id="feed">
+
+
+                    <!-- RECOGNITION 1 -->
+
+                    <article
+                        class="recognition-card"
+                        data-category="Most Supportive"
+                    >
+
+                        <div class="avatar blue">
+                            AK
+                        </div>
+
+                        <div class="recognition-info">
+
+                            <div class="recognition-top">
+
+                                <span class="category coral">
+                                    Most Supportive
+                                </span>
+
+                                <small>
+                                    Today
+                                </small>
+
+                            </div>
+
+                            <h3>
+                                Daniel Kimani
+                            </h3>
+
+                            <p>
+                                Always brings positive energy to
+                                training and supports everyone.
+                                You make the team better!
+                            </p>
+
+                            <small>
+                                — Aisha N.
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- RECOGNITION 2 -->
+
+                    <article
+                        class="recognition-card"
+                        data-category="Most Improved"
+                    >
+
+                        <div class="avatar gold">
+                            JM
+                        </div>
+
+                        <div class="recognition-info">
+
+                            <div class="recognition-top">
+
+                                <span class="category gold">
+                                    Most Improved
+                                </span>
+
+                                <small>
+                                    Yesterday
+                                </small>
+
+                            </div>
+
+                            <h3>
+                                Jayce Mwangi
+                            </h3>
+
+                            <p>
+                                Your hard work during training is
+                                really paying off. Keep going!
+                            </p>
+
+                            <small>
+                                — Brian O.
+                            </small>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- RECOGNITION 3 -->
+
+                    <article
+                        class="recognition-card"
+                        data-category="Best Teammate"
+                    >
+
+                        <div class="avatar purple">
+                            EK
+                        </div>
+
+                        <div class="recognition-info">
+
+                            <div class="recognition-top">
+
+                                <span class="category purple-text">
+                                    Best Teammate
+                                </span>
+
+                                <small>
+                                    2 days ago
+                                </small>
+
+                            </div>
+
+                            <h3>
+                                Ethan Kamau
+                            </h3>
+
+                            <p>
+                                You always encourage other players
+                                and celebrate their success.
+                            </p>
+
+                            <small>
+                                — Peter M.
+                            </small>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             TEAM CHAT
+        ========================== -->
+
+        <section class="chat-section" id="community">
+
+            <div class="chat-shell">
+
+                <button
+                    class="chat-launcher"
+                    id="chatLauncher"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="communityChat"
+                >
+                    <span>Community Chat</span>
+                    <span class="chat-badge" aria-hidden="true">💬</span>
+                </button>
+
+                <div class="community-chat-panel" id="communityChat" hidden>
+
+                    <div class="chat-panel-header">
+
+                        <div>
+                            <p>TEAM CHAT</p>
+                            <h2>Talk with your teammates</h2>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="chat-close"
+                            id="chatClose"
+                            aria-label="Close community chat"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+                    <div class="team-chat">
+
+                        <div class="chat-top">
+
+                            <div>
+                                <strong>U18 Team Chat</strong>
+                                <span>● 5 players online</span>
+                            </div>
+
+                            <span>⚽</span>
+
+                        </div>
+
+                        <div
+                            class="messages"
+                            id="messages"
+                            role="log"
+                            aria-live="polite"
+                            aria-label="Team conversation"
+                        >
+                            <div class="chat-message received">
+                                <div class="chat-name">Aisha</div>
+                                <p>Hey everyone, how's your week going?</p>
+                                <small>Now</small>
+                            </div>
+                        </div>
+
+                        <form id="chatForm" class="chat-input">
+                            <input
+                                type="text"
+                                id="chatInput"
+                                placeholder="Write a message..."
+                                autocomplete="off"
+                            >
+                            <button type="submit" aria-label="Send message">➤</button>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+
+        <div class="footer-main">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+
+                    ⚽
+
+                </div>
+
+                <div>
+
+                    <h2>
+                        RISE UP
+                    </h2>
+
+                    <p>
+                        U18 FOOTBALL COMMUNITY
+                    </p>
+
+                    <span>
+                        LIFT. ENCOURAGE. GROW.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="practice.html">
+                    Home
+                </a>
+
+                <a href="liftothersup.html#home">
+                    Lift Others Up
+                </a>
+
+                <a href="text.html">
+                    Progress
+                </a>
+
+                <a href="challenges.html">
+                    Challenges
+                </a>
+
+                <a href="profile.html">
+                    Profile
+                </a>
+
+            </div>
+
+
+
+            <!-- SUPPORT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Support
+                </h3>
+
+                <a href="help.html">
+                    Help Centre
+                </a>
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+                <a href="terms.html">
+                    Privacy Policy
+                </a>
+
+                <a href="terms.html">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+
+
+            <!-- SOCIALS -->
+
+            <div class="footer-column social-column">
+
+                <h3>
+                    Stay Connected
+                </h3>
+
+                <div class="socials">
+
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="icon-fill" cx="18" cy="6.5" r="1"></circle></svg>
+                    </a>
+
+                    <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path class="icon-fill" d="M22 5.9a8 8 0 0 1-2.36.65 4.12 4.12 0 0 0 1.8-2.27 8.2 8.2 0 0 1-2.6.99 4.08 4.08 0 0 0-7.06 2.79c0 .32.04.63.1.93a11.6 11.6 0 0 1-8.42-4.27 4.08 4.08 0 0 0 1.26 5.45 4.05 4.05 0 0 1-1.85-.51v.05a4.09 4.09 0 0 0 3.27 4 4.1 4.1 0 0 1-1.84.07 4.1 4.1 0 0 0 3.82 2.84A8.2 8.2 0 0 1 2 18.31a11.57 11.57 0 0 0 6.27 1.84c7.52 0 11.64-6.23 11.64-11.64l-.01-.53A8.3 8.3 0 0 0 22 5.9Z"></path></svg>
+                    </a>
+
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path class="icon-fill" d="M5.2 8.4a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM3.5 10h3.4v10.5H3.5V10Zm5.5 0h3.3v1.43h.05A3.62 3.62 0 0 1 15.6 9.7c3.48 0 4.12 2.29 4.12 5.26v5.54h-3.44v-4.91c0-1.17-.02-2.68-1.63-2.68-1.63 0-1.88 1.27-1.88 2.59v5H9V10Z"></path></svg>
+                    </a>
+
+                    <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.8a8.5 8.5 0 0 1-12.58 7.46L3 20.5l1.28-4.77A8.5 8.5 0 1 1 20.5 11.8Z"></path><path d="M8.4 7.7c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4 0 .6.5.9 1.3 1.7 2.3 2.2.2.1.4.1.6-.1l.7-.8c.2-.2.4-.3.7-.2l1.6.8c.3.1.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.4-1.2.7-2 .6-1-.1-2.3-.6-3.6-1.7-1.8-1.5-2.9-3.3-3-4.4-.1-.9.3-1.5.7-1.9.1-.1.3-.1.5-.1Z"></path></svg>
+                    </a>
+
+                    <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.1a4.1 4.1 0 1 1-3.4-4.04"></path><path d="M14 3c.4 2.8 2.1 4.6 5 5"></path></svg>
+                    </a>
+
+                    <a href="https://www.messenger.com/" target="_blank" rel="noopener noreferrer" aria-label="Messenger">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5c-5.3 0-9.5 3.8-9.5 8.6 0 2.7 1.3 5 3.5 6.6v3l3.2-1.8c.9.3 1.8.5 2.8.5 5.3 0 9.5-3.8 9.5-8.6S17.3 3.5 12 3.5Z"></path><path class="icon-fill" d="m6.8 14.4 4.2-4.5 2.5 2 3.8-2-4.2 4.5-2.5-2-3.8 2Z"></path></svg>
+                    </a>
+
+                </div>
+
+                <p>
+                    Together we rise.
+                </p>
+
+            </div>
+
+
+
+            <!-- FOOTER QUOTE -->
+
+            <div class="footer-quote">
+
+                <div>
+                    ♕
+                </div>
+
+                <p>
+                    Small<br>
+                    steps.<br>
+                    Big<br>
+                    dreams.
+                </p>
+
+                <span>
+                    ⚽
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 RISEUP. All rights reserved.
+            </p>
+
+            <p>
+                Made for the U18 Football Community.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- NOTIFICATION -->
+
+    <div
+        class="notification"
+        id="notification"
+    >
+        Recognition submitted!
+    </div>
+
+
+
+    <script src="liftothersup.js"></script>
+
+</body>
+
+</html>

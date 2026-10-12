@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your U18 Football Community player profile">
+  <title>Player Profile | U18 Football Community</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+  <!-- TOP NAVIGATION -->
+  <nav class="topbar" aria-label="Main navigation">
+    <a class="brand" href="practice.html" aria-label="UP Recognise">
+      <span class="brand-mark">U<span>P</span></span>
+      <span class="brand-words">
+        <strong>RECOGNISE</strong>
+        <small>LIFT OTHERS UP</small>
+      </span>
+    </a>
+
+    <form class="nav-search" id="profile-search-form" role="search">
+      <label class="sr-only" for="profile-search">Search the community</label>
+      <input
+        id="profile-search"
+        type="search"
+        placeholder="Search the community…"
+        autocomplete="off"
+        aria-controls="profile-search-results"
+        aria-expanded="false"
+      >
+      <button type="submit" aria-label="Search">⌕</button>
+      <div
+        class="nav-search-results"
+        id="profile-search-results"
+        role="region"
+        aria-label="Search results"
+        aria-live="polite"
+        hidden
+      ></div>
+    </form>
+
+    <div class="nav-links">
+      <a href="practice.html">Home</a>
+      <a href="liftothersup.html">Lift Others Up</a>
+      <a href="text.html">Progress</a>
+      <a href="challenges.html">Challenges</a>
+      <a href="profile.html" class="nav-active" aria-current="page">Profile</a>
+    </div>
+
+    <div class="nav-user">
+      <span class="nav-avatar" aria-hidden="true">👨</span>
+      <span id="nav-username">Daniel</span>
+      <span class="nav-divider" aria-hidden="true"></span>
+      <button id="logout-btn" class="logout-btn" type="button">Log out</button>
+    </div>
+  </nav>
+
+  <main class="page-shell">
+
+    <!-- PROFILE HEADER -->
+    <section class="cover" id="profile-cover">
+      <div class="cover-sun"></div>
+      <div class="hill hill-back"></div>
+      <div class="hill hill-front"></div>
+
+      <div class="cover-tools">
+        <button id="change-cover-btn" class="cover-tool" type="button">
+          Change background
+        </button>
+        <button id="reset-cover-btn" class="cover-tool cover-reset" type="button" hidden>
+          Reset
+        </button>
+        <input id="cover-image-input" type="file" accept="image/*" hidden>
+      </div>
+
+      <div class="cover-content">
+        <div class="avatar-frame">
+          <img
+            id="avatar"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%23dff1e5'/%3E%3Cpath d='M17 120c3-29 18-43 43-43s40 14 43 43' fill='%23075a36'/%3E%3Cpath d='M38 48c0-20 9-32 22-32s22 12 22 32v13c-4 13-12 21-22 21s-18-8-22-21z' fill='%23b8754f'/%3E%3Cpath d='M37 47c-3-22 6-35 24-35 18 0 26 15 23 37-6-3-10-9-12-16-7 6-19 9-35 9z' fill='%232c211d'/%3E%3Cpath d='M40 64c6 2 11 4 20 4 9 0 15-2 20-4-2 16-10 25-20 25s-18-9-20-25z' fill='%233b241d'/%3E%3Ccircle cx='50' cy='55' r='2' fill='%23231b18'/%3E%3Ccircle cx='70' cy='55' r='2' fill='%23231b18'/%3E%3C/svg%3E"
+            alt="Daniel's avatar"
+          >
+        </div>
+
+        <div class="identity">
+          <div class="name-line">
+            <h1 id="profile-username">Player Name</h1>
+            <span class="player-tag">Player</span>
+          </div>
+
+          <p id="profile-bio">Midfielder | U18 Team</p>
+
+          <p class="joined-line">
+            <span id="profile-position">Position: Midfielder</span>
+            <span class="dot-separator">•</span>
+            <span id="profile-joined">Joined —</span>
+          </p>
+        </div>
+
+        <button
+          id="edit-profile-btn"
+          class="button button-light"
+          type="button"
+        >
+          ✎ Edit Profile
+        </button>
+      </div>
+      <p id="cover-status" class="cover-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- PROFILE SECTION TABS -->
+    <div class="section-nav" aria-label="Profile sections">
+      <button class="section-tab active" data-tab="goals" type="button">
+        ◎ Goals
+      </button>
+
+      <button class="section-tab" data-tab="achievements" type="button">
+        ✦ Achievements
+      </button>
+
+      <button class="section-tab" data-tab="challenges" type="button">
+        ⚑ Challenges
+      </button>
+
+      <button class="section-tab" data-tab="team" type="button">
+        ♧ Team
+      </button>
+
+      <button class="section-tab" data-tab="progress" type="button">
+        ↗ Progress
+      </button>
+
+      <button class="section-tab" data-tab="feedback" type="button">
+        ♡ Feedback
+      </button>
+    </div>
+
+    <!-- MAIN PROFILE CONTENT -->
+    <section class="content-grid">
+
+      <!-- PLAYER INFORMATION -->
+      <aside class="panel player-information">
+
+        <div class="panel-heading">
+          <h2>Player Information</h2>
+          <span class="heading-icon">●</span>
+        </div>
+
+        <div class="info-row">
+          <span class="info-icon">♙</span>
+          <div>
+            <small>Full Name</small>
+            <strong id="info-fullname">Player Name</strong>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <span class="info-icon">⚽</span>
+          <div>
+            <small>Position</small>
+            <strong id="info-position">Midfielder</strong>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <span class="info-icon">▣</span>
+          <div>
+            <small>Join Date</small>
+            <strong id="info-joined">—</strong>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <span class="info-icon">♧</span>
+          <div>
+            <small>Age Group</small>
+            <strong id="info-agegroup">U18</strong>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <span class="info-icon">✉</span>
+          <div>
+            <small>Email</small>
+            <strong id="info-email">—</strong>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- RIGHT-HAND CONTENT PANEL -->
+      <section class="panel main-panel">
+
+        <!-- GOALS -->
+        <div id="tab-goals" class="tab-panel active">
+
+          <div class="panel-heading">
+            <div>
+              <h2>My Goals</h2>
+              <span class="muted-label">Weekly, monthly &amp; yearly targets</span>
+            </div>
+          </div>
+
+          <div id="goals-list" class="goal-list"></div>
+          <div class="goal-list-actions">
+            <p>Make a goal your own by choosing a timeframe, writing a clear target, and selecting an accountability partner.</p>
+            <button id="add-goal-btn" class="button button-primary" type="button">
+              + Add a goal
+            </button>
+          </div>
+          <p id="goals-status" class="small-note" role="status" aria-live="polite"></p>
+
+          <blockquote class="quote">
+            <span>❝</span>
+            <p>Progress isn't perfection, it's consistency. Share your goal with someone who can cheer you on.</p>
+          </blockquote>
+
+        </div>
+
+        <!-- ACHIEVEMENTS -->
+        <div id="tab-achievements" class="tab-panel">
+
+          <div class="panel-heading">
+            <h2>Achievements</h2>
+            <span class="muted-label">Keep it up</span>
+          </div>
+
+          <div id="achievements-list" class="stack-list"></div>
+
+        </div>
+
+        <!-- CHALLENGES -->
+        <div id="tab-challenges" class="tab-panel">
+
+          <div class="panel-heading">
+            <h2>My Challenges</h2>
+            <span class="muted-label">Current tasks</span>
+          </div>
+
+          <div class="simple-card">
+            <span class="round-icon yellow">⚡</span>
+
+            <div>
+              <strong>Complete 3 training sessions</strong>
+              <p>Build a steady weekly routine.</p>
+            </div>
+
+            <span class="status">In progress</span>
+          </div>
+
+          <div class="simple-card">
+            <span class="round-icon pink">🤝</span>
+
+            <div>
+              <strong>Support a teammate</strong>
+              <p>Encourage someone during training.</p>
+            </div>
+
+            <span class="status status-grey">Not started</span>
+          </div>
+
+        </div>
+
+        <!-- TEAM -->
+        <div id="tab-team" class="tab-panel">
+
+          <div class="panel-heading">
+            <h2>My Team</h2>
+            <span class="muted-label">U18 squad</span>
+          </div>
+
+          <div class="team-card">
+            <span class="team-ball">⚽</span>
+
+            <div>
+              <strong>U18 Football Team</strong>
+              <p>Train together. Grow together.</p>
+              <small>
+                Team details can be connected to your database later.
+              </small>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- PROGRESS -->
+        <div id="tab-progress" class="tab-panel">
+
+          <div class="panel-heading">
+            <h2>My Progress</h2>
+            <span class="muted-label">Season overview</span>
+          </div>
+
+          <div class="progress-block">
+            <div class="progress-head">
+              <span>Training consistency</span>
+              <strong id="consistency-text">60%</strong>
+            </div>
+
+            <div class="progress-track">
+              <div
+                id="consistency-bar"
+                class="progress-fill"
+                style="width:60%"
+              ></div>
+            </div>
+          </div>
+
+          <div class="progress-block">
+            <div class="progress-head">
+              <span>Teamwork</span>
+              <strong id="teamwork-text">40%</strong>
+            </div>
+
+            <div class="progress-track">
+              <div
+                id="teamwork-bar"
+                class="progress-fill blue"
+                style="width:40%"
+              ></div>
+            </div>
+          </div>
+
+          <p class="small-note">
+            Progress values shown here are sample values until connected
+            to your player records.
+          </p>
+
+        </div>
+
+        <!-- FEEDBACK -->
+        <div id="tab-feedback" class="tab-panel">
+
+          <div class="panel-heading">
+            <h2>Feedback</h2>
+            <span class="muted-label">Your voice matters</span>
+          </div>
+
+          <label class="feedback-label" for="feedback-message">
+            Share a suggestion with the community
+          </label>
+
+          <textarea
+            id="feedback-message"
+            rows="4"
+            placeholder="Write your feedback here..."
+          ></textarea>
+
+          <button
+            id="send-feedback"
+            class="button button-primary"
+            type="button"
+          >
+            Send feedback
+          </button>
+
+          <p id="feedback-status" class="small-note" role="status"></p>
+
+        </div>
+
+      </section>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <a class="brand footer-brand" href="index.html">
+      <span class="brand-mark">⚽</span>
+      <span>
+        <strong>U18</strong>
+        <small>Football Community</small>
+      </span>
+    </a>
+
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy</a>
+    </div>
+
+    <p>Growing as players, together.</p>
+
+  </footer>
+
+  <!-- EDIT PROFILE MODAL -->
+  <div
+    id="edit-modal"
+    class="modal hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+  >
+
+    <form class="modal-box" id="edit-form">
+
+      <div class="modal-heading">
+        <h2 id="modal-title">Edit profile</h2>
+
+        <button
+          id="close-modal"
+          class="close-modal"
+          type="button"
+          aria-label="Close"
+        >
+          ×
+        </button>
+      </div>
+
+      <label for="edit-username">Full name / username</label>
+      <input
+        id="edit-username"
+        name="username"
+        maxlength="60"
+        required
+      >
+
+      <label for="edit-bio">Short bio</label>
+      <textarea
+        id="edit-bio"
+        name="bio"
+        rows="3"
+        maxlength="180"
+        placeholder="Tell your team a little about yourself"
+      ></textarea>
+
+      <label for="edit-position">Position</label>
+      <select id="edit-position" name="position">
+        <option>Goalkeeper</option>
+        <option>Defender</option>
+        <option>Midfielder</option>
+        <option>Forward</option>
+      </select>
+
+      <div class="modal-actions">
+        <button
+          id="cancel-edit"
+          class="button button-light"
+          type="button"
+        >
+          Cancel
+        </button>
+
+        <button class="button button-primary" type="submit">
+          Save changes
+        </button>
+      </div>
+
+      <p class="small-note">
+        Profile changes are saved to your player account.
+      </p>
+
+    </form>
+  </div>
+
+  <!-- ADD OR EDIT GOAL MODAL -->
+  <div
+    id="goal-modal"
+    class="modal hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="goal-modal-title"
+  >
+    <form class="modal-box" id="goal-form">
+      <div class="modal-heading">
+        <h2 id="goal-modal-title">Add a goal</h2>
+        <button
+          id="close-goal-modal"
+          class="close-modal"
+          type="button"
+          aria-label="Close"
+        >
+          ×
+        </button>
+      </div>
+
+      <label for="goal-period">Timeframe</label>
+      <select id="goal-period" name="period" required>
+        <option value="week">This week</option>
+        <option value="month">This month</option>
+        <option value="year">This year</option>
+      </select>
+
+      <label for="goal-title">What do you want to achieve?</label>
+      <textarea
+        id="goal-title"
+        name="goal"
+        rows="3"
+        maxlength="250"
+        placeholder="For example: Complete three focused training sessions"
+        required
+      ></textarea>
+
+      <label for="goal-accountability">Who will keep you accountable?</label>
+      <input
+        id="goal-accountability"
+        name="accountability"
+        maxlength="100"
+        placeholder="A coach, teammate, or family member"
+        required
+      >
+
+      <div class="modal-actions">
+        <button id="cancel-goal" class="button button-light" type="button">
+          Cancel
+        </button>
+        <button id="save-goal" class="button button-primary" type="submit">
+          Save goal
+        </button>
+      </div>
+      <p id="goal-form-status" class="small-note" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>
